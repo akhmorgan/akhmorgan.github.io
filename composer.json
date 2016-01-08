@@ -1,0 +1,9 @@
+{
+    "name": "vendor-name/project-name",
+    "description": "This is a test",
+    "version": "0.3.0",
+    "type": "library",
+    "keywords": ["logging"],
+    "time": "2016-01-08",
+    "license": "MIT",
+}
