@@ -3,7 +3,7 @@ body {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .fb-comments {
-  display: table;
+  display: table !important;
   margin: 0 auto;
 }
 .text-muted {
