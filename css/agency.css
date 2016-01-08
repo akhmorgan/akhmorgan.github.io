@@ -578,6 +578,19 @@ section#contact .section-heading {
 section#contact .ss-q-item-label {
   display: none;
 }
+section#contact .ss-q-item-label.show {
+  display: inline-block !important;
+}
+section#contact .ss-radio {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bbbbbb !important;
+}
+section#contact .ss-choices {
+  display: inline-block;
+  margin-left: 25px;
+}
 section#contact .form-group {
   margin-bottom: 25px;
 }
