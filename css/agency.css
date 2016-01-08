@@ -575,6 +575,9 @@ section#contact {
 section#contact .section-heading {
   color: white;
 }
+section#contact .ss-q-item-label {
+  display: none;
+}
 section#contact .form-group {
   margin-bottom: 25px;
 }
@@ -620,6 +623,9 @@ section#contact :-ms-input-placeholder {
 }
 section#contact .text-danger {
   color: #e74c3c;
+}
+section#contact .col-lg-12 table {
+  margin: 0 auto;
 }
 footer {
   padding: 25px 0;
