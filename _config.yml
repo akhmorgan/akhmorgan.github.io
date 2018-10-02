@@ -26,6 +26,15 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+excerpt_separator: <!--excerpt-->
+show_excerpts: false
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Adam Morgan"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "A Developer's intro to WebGL"
 date:   2014-10-03 12:00:00
 tags: [dev, WebGL]

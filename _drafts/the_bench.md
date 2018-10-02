@@ -1,8 +1,8 @@
 ---
-layout: post
 title:  "The Bench"
 date:   2018-10-01 15:19:38 +0100
 tags: [bench]
+thumbnail: "/assets/Wooden_Bench.png"
 ---
 
 # The Bench
