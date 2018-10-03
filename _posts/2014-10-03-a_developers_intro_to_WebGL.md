@@ -4,7 +4,6 @@ date:   2014-10-03 12:00:00
 tags: [dev, WebGL]
 categories: [intro]
 ---
-# A DEVELOPER'S INTRO TO WEBGL
 
 Recently, I have been starting to get to grips with WebGL. Having little to no real previous experience with 3D graphics, there was a reasonably steep learning curve to overcome. So I thought I'd touch on a few of the basics here and share some resources that I found really useful.
 
