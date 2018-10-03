@@ -1,0 +1,37 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row social">
+      <div class="col-md-4 mx-auto text-center">
+        {%- if site.github_username -%}
+        <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}">
+          <span class="fa-stack fa-lg">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        {%- endif -%}
+        {%- if site.email -%}
+        <a class="u-email" href="mailto:{{ site.email }}">
+          <span class="fa-stack fa-lg">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-at fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        {%- endif -%}
+        {%- if site.linkedin_username -%}
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}">
+          <span class="fa-stack fa-lg">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mx-auto text-center">
+        <p class="text-muted">{{ site.author }} {{ 'now' | date: "%Y" }}</p>
+      </div>
+    </div>
+  </div>
+</footer>

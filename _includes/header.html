@@ -1,0 +1,35 @@
+<header class="header" role="banner">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">
+        <img src="{{ "/assets/img/logo_base.png" | relative_url }}" width="50" height="50">
+        <span>{{ site.title | escape }}</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ "/" | relative_url }}">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ "blog" | relative_url }}">Blog Home</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{{ "blog/tags" | relative_url }}">Tags</a>
+              <a class="dropdown-item" href="{{ "blog/categories" | relative_url }}">Categories</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ "about" | relative_url }}">About<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
