@@ -1,0 +1,36 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@import 'variables';
+@import 'bootstrap/bootstrap';
+@import 'footer';
+@import 'header';
+@import 'cover';
+
+#home-container {
+  max-width: 960px;
+}
+
+.social-media-list {
+  list-style: none;
+}
+
+blockquote {
+  font-style: italic;
+  color: $gray-500;
+}
+
+.svg-icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  fill: $dark;
+  padding-right: 5px;
+  vertical-align: text-top;
+  box-sizing: content-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
