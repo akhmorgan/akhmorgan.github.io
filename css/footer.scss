@@ -1,4 +1,4 @@
-$footer-height: 180px;
+$footer-height: 100px;
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -6,9 +6,11 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   margin-bottom: $footer-height;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -17,4 +19,12 @@ body {
   border-top: 1px solid #e8e8e8;
   background: $light;
   padding-top: 24px;
+}
+
+.social a {
+  color: $dark;
+  text-decoration: none !important;
+  &:hover {
+    color: $gray-600;
+  }
 }
