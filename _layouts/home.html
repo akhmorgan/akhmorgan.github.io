@@ -35,7 +35,7 @@ layout: default
             {% if post.thumbnail %}
             <img class="featurette-image img-fluid mx-auto post-thumbnail" data-src="holder.js/500x500/auto" alt="500x500" src="{{ post.thumbnail }}" />
             {% else %}
-            <img class="featurette-image img-fluid mx-auto post-thumbnail" data-src="holder.js/500x500/auto" alt="500x500" src="/assets/default_thumbnail.png" />
+            <img class="featurette-image img-fluid mx-auto post-thumbnail" data-src="holder.js/500x500/auto" alt="500x500" src="{{ site.baseurl }}/assets/default_thumbnail.png" />
             {% endif %}
           </div>
         </div>

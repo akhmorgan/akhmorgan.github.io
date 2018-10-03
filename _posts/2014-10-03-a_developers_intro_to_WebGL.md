@@ -2,6 +2,7 @@
 title:  "A Developer's intro to WebGL"
 date:   2014-10-03 12:00:00
 tags: [dev, WebGL]
+categories: [intro]
 ---
 # A DEVELOPER'S INTRO TO WEBGL
 
@@ -15,7 +16,7 @@ There are tons of great resources out there to introduce the key concepts behind
 
 Basically, all graphics in WebGL are made up of vertices and fragments. Vertices are what you might expect; points with x, y and z coordinates defining their position. Fragments are in essence the individual pixels within triangles of vertices.
 
-![Vertices and fragments](/assets/shaders.jpg)
+![Vertices and fragments]({{ site.baseurl }}/assets/img/shaders.jpg)
 
 So, to render a 3D image with WebGL, we essentially build up the image out of triangles. We tell WebGL where we want each vertex, how we want the vertices to be connected into triangles, and how we want both the vertices and the fragments between them to be shaded.
 
@@ -23,7 +24,7 @@ There’s a whole lot more to it than that, of course. So please check out some 
 
 ## WEBGL LIBRARIES
 
-So we’ve **very** briefly covered how WebGL 3D graphics are created. Which may seem simple enough, but in practice it involves several quite mathematical, and perhaps not very intuitive steps. So how does that scale to rendering cubes, or spheres, or [aquariums]( https://webglsamples.googlecode.com/hg/aquarium/aquarium.html)?
+So we’ve **very** briefly covered how WebGL 3D graphics are created. Which may seem simple enough, but in practice it involves several quite mathematical, and perhaps not very intuitive steps. So how does that scale to rendering cubes, or spheres, or [aquariums]( https://webglsamples.org/aquarium/aquarium.html)?
 
 Short answer: a fair amount of work and usually the use of a library to abstract away some of the more tedious and repetitive tasks.
 
