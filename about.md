@@ -2,6 +2,9 @@
 layout: page
 title: About
 permalink: /about/
+header: 'About Me'
+subtitle: 'Who I am and what I do.'
+jumbotron: true
 ---
 
 # About Me
