@@ -1,17 +1,17 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col">
-        <h4>{{ site.author | escape }}</h4>
-        {%- if site.email -%}
-        <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <div class="col-md-4 mx-auto text-center">
+        {%- if site.github_username -%}
+        <p>
+          <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a>
+        </p>
         {%- endif -%}
-      </div>
-      <div class="col">
-        {%- include social.html -%}
-      </div>
-      <div class="col">
-        <p>{{- site.description | escape -}}</p>
+        {%- if site.email -%}
+        <p>
+          <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
+        {%- endif -%}
       </div>
     </div>
   </div>
