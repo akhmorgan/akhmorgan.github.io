@@ -17,9 +17,11 @@ title: Adam Morgan
 author: Adam Morgan
 email: your-email@example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://akhmorgan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  akhmorgan
 linkedin_username: adam-morgan-b6710666
+disqus:
+  shortname: akhmorgan-github-io
 # Build settings
 markdown: kramdown
 plugins:
@@ -36,6 +38,7 @@ defaults:
     values:
       layout: "post"
       author: "Adam Morgan"
+      comments: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

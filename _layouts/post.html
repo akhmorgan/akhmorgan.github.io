@@ -21,13 +21,12 @@ layout: default
         <div class="post-content e-content col-lg-8 col-md-10 mx-auto" itemprop="articleBody">
           <h2>{{ page.title | escape }}</h2>
           {{ content }}
+          <hr>
+          {%- if site.disqus.shortname -%}
+          {%- include disqus_comments.html -%}
+          {%- endif -%}
         </div>
       </div>
-
-      {%- if site.disqus.shortname -%}
-      {%- include disqus_comments.html -%}
-      {%- endif -%}
-
       <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
     </div>
   </article>
