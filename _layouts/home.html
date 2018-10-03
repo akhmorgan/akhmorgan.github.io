@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if site.posts.size > 0 -%}
+  <div class="container" id="home-container">
+    <div class="row justify-content-between align-items-center">
+      <h1 class="post-list-heading col-4">{{ page.list_title | default: "Posts" }}</h1>
+      <div class="col-4 text-center">
+        <a class="rss-subscribe btn btn-sm btn-outline-primary" href="{{ "/feed.xml" | relative_url }}">subscribe via RSS</a>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="container">
+        {%- for post in site.posts -%}
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading"><a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a></h2>
+            <span class="text-muted">{{ post.date | date: date_format }}</span>
+            {% if post.snippet %}
+              <p class="post-snippet">{{ post.snippet }}</p>
+            {% else %}
+              <p class="post-snippet">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            {% endif %}
+          </div>
+          <div class="col-md-5">
+            {% if post.thumbnail %}
+            <img class="featurette-image img-fluid mx-auto post-thumbnail" data-src="holder.js/500x500/auto" alt="500x500" src="{{ post.thumbnail }}" />
+            {% else %}
+            <img class="featurette-image img-fluid mx-auto post-thumbnail" data-src="holder.js/500x500/auto" alt="500x500" src="/assets/default_thumbnail.png" />
+            {% endif %}
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+        {%- endfor -%}
+      </div>
+    </div>
+    {%- endif -%}
+  </div>
+
+</div>
