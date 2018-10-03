@@ -16,8 +16,6 @@
 title: Adam Morgan
 author: Adam Morgan
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  A blog by Adam about general tech things that may or may not be of interest.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  akhmorgan
