@@ -1,0 +1,18 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h4>{{ site.author | escape }}</h4>
+        {%- if site.email -%}
+        <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        {%- endif -%}
+      </div>
+      <div class="col">
+        {%- include social.html -%}
+      </div>
+      <div class="col">
+        <p>{{- site.description | escape -}}</p>
+      </div>
+    </div>
+  </div>
+</footer>

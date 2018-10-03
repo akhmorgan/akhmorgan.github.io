@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Adam's Blog
+author: Adam Morgan
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog by Adam about general tech things that may or may not be of interest.
@@ -23,11 +24,13 @@ github_username:  akhmorgan
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 excerpt_separator: <!--excerpt-->
 show_excerpts: false
+sass:
+  sass_dir: css
 defaults:
   -
     scope:
