@@ -1,7 +1,4 @@
 <header class="header" role="banner">
-  {%- assign default_paths = site.pages | map: "path" -%}
-  {%- assign page_paths = site.header_pages | default: default_paths -%}
-  {%- if page_paths -%}
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">
@@ -14,17 +11,25 @@
 
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-          {%- for path in page_paths -%}
-          {%- assign my_page = site.pages | where: "path", path | first -%}
-          {%- if my_page.title -%}
           <li class="nav-item">
-            <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }} <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ "/" | relative_url }}">Home<span class="sr-only">(current)</span></a>
           </li>
-          {%- endif -%}
-          {%- endfor -%}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ "blog" | relative_url }}">Blog Home</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{{ "blog/tags" | relative_url }}">Tags</a>
+              <a class="dropdown-item" href="{{ "blog/categories" | relative_url }}">Categories</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ "about" | relative_url }}">About<span class="sr-only">(current)</span></a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-  {%- endif -%}
 </header>
