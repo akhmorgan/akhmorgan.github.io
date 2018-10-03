@@ -22,6 +22,9 @@ layout: default
               {{ post.title | escape }}
             </a></h2>
             <span class="text-muted">{{ post.date | date: date_format }}</span>
+            {%- for tag in post.tags -%}
+            <a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="badge badge-info"><i class="fas fa-tag"></i>{{tag}}</a>
+            {%- endfor -%}
             {% if post.snippet %}
               <p class="post-snippet">{{ post.snippet }}</p>
             {% else %}
