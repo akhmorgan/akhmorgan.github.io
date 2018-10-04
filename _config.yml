@@ -22,7 +22,6 @@ github_username:  akhmorgan
 linkedin_username: adam-morgan-b6710666
 disqus:
   shortname: akhmorgan-github-io
-# Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
