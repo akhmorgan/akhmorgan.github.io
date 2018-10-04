@@ -7,7 +7,7 @@ title: Categories
 
 <div>
     {% for category in site.categories %}
-    <a href="#{{ category[0] | slugify }}" class="post-category badge badge-info">
+    <a class="post-category" href="#{{ category[0] | slugify }}" class="post-category badge badge-info">
       <i class="far fa-folder"></i>{{ category[0] }}
     </a>
     {% endfor %}

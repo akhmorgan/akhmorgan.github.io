@@ -22,6 +22,12 @@ layout: default
           <h2>{{ page.title | escape }}</h2>
           {{ content }}
           <hr>
+          {%- for tag in page.tags -%}
+            <a class="post-tag" href="{{ site.baseurl }}/blog/tags#{{ tag | slugify }}">
+              <span class="badge badge-info"><i class="fas fa-tag"></i>{{tag}}</span>
+            </a>
+          {%- endfor -%}
+          <hr>
           {%- if site.disqus.shortname -%}
           {%- include disqus_comments.html -%}
           {%- endif -%}

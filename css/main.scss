@@ -15,9 +15,10 @@
   list-style: none;
 }
 
-.post-meta {
-  .post-tags a {
-    text-decoration: none !important;
+a.post-tag, a.post-category {
+  text-decoration: none !important;
+  i {
+    margin-right: 4px;
   }
 }
 
