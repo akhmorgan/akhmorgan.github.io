@@ -27,6 +27,13 @@ blockquote {
   color: $gray-500;
 }
 
+#blogCarousel {
+  background-color: $gray-600;
+  .carousel-item > img {
+    height: 30rem;
+  }
+}
+
 .svg-icon {
   width: 30px;
   height: 30px;
