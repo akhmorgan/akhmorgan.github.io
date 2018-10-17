@@ -60,6 +60,8 @@ For the purposes of this tutorial we're going to be using a mix of [Google Colab
 *
 
 ## Next Steps?
+* Keras activations
+* Optimising models
 * TensorFlow.js
 * TF Lite for mobile
 * Google ML APIs
@@ -110,3 +112,11 @@ what type of classifier do I want/need?
 https://developers.google.com/machine-learning/crash-course/
 
 https://www.kaggle.com/yufengg/zoo-demo
+
+https://keras.io/getting-started/sequential-model-guide/
+
+https://machinelearningmastery.com/what-is-generalization-in-machine-learning/
+
+https://machinelearningmastery.com/data-terminology-in-machine-learning/
+
+https://stackoverflow.com/questions/44747343/keras-input-explanation-input-shape-units-batch-size-dim-etc
