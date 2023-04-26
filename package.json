@@ -6,5 +6,24 @@
   "repository": "git@github.com:akhmorgan/akhmorgan.github.io.git",
   "author": "akhmorgan <akhmorgan@hotmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "dev": "gatsby develop",
+    "dev-open": "concurrently \"gatsby develop\" \"open http://localhost:8000\""
+  },
+  "dependencies": {
+    "gatsby": "^5.9.0",
+    "gatsby-plugin-image": "^3.9.0",
+    "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-remark-copy-linked-files": "^6.9.0",
+    "gatsby-remark-images": "^7.9.0",
+    "gatsby-source-filesystem": "^5.9.0",
+    "gatsby-transformer-remark": "^6.9.0",
+    "gatsby-transformer-sharp": "^5.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
 }
