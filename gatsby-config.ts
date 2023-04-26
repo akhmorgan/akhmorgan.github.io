@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images/`,
+        path: `${__dirname}/content/blog/assets/`,
       },
     },
     {
@@ -21,7 +21,26 @@ const config: GatsbyConfig = {
         path: `${__dirname}/content/blog/`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              linkImagesToOriginal: false,
+              withWebp: true,
+              quality: 100,
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+        ],
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
   ],
 };
 
