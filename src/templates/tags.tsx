@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 // Components
 import { Link, graphql } from "gatsby";
+import { BlogCard } from "../components/blog-card";
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -18,11 +19,7 @@ const Tags = ({ pageContext, data }) => {
         {edges.map(({ node }) => {
           const { slug } = node.fields;
           const { title } = node.frontmatter;
-          return (
-            <li key={slug}>
-              <Link to={"/blog" + slug}>{title}</Link>
-            </li>
-          );
+          return <BlogCard key={node.id} post={node}></BlogCard>;
         })}
       </ul>
       {/*
@@ -73,8 +70,11 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            date(fromNow: true)
             title
+            author
           }
+          excerpt
         }
       }
     }

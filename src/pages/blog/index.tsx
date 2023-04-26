@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import { BlogCard } from "../../components/blog-card";
 
 const isPostPublished = (post) => {
   return post.frontmatter.date.includes("ago");
@@ -15,15 +16,7 @@ export default function Blog({ data }) {
       {posts.map(
         (post) =>
           isPostPublished(post) && (
-            <article key={post.id}>
-              <Link to={"/blog" + post.fields.slug}>
-                <h2>{post.frontmatter.title}</h2>
-              </Link>
-              <small>
-                {post.frontmatter.author}, {post.frontmatter.date}
-              </small>
-              <p>{post.excerpt}</p>
-            </article>
+            <BlogCard key={post.id} post={post}></BlogCard>
           )
       )}
     </div>
