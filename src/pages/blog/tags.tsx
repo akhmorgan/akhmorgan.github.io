@@ -53,13 +53,16 @@ TagsPage.propTypes = {
 export default TagsPage;
 
 export const pageQuery = graphql`
-  query {
+  query tagQuery($currentDate: Date!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(limit: 2000) {
+    allMarkdownRemark(
+      filter: { frontmatter: { date: { lte: $currentDate } } }
+      limit: 2000
+    ) {
       group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
