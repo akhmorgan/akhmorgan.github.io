@@ -1,7 +1,9 @@
 const path = require(`path`);
+const _ = require("lodash");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const blogPostTemplate = path.resolve(`./src/templates/blog-post.tsx`);
+const tagTemplate = path.resolve("./src/templates/tags.tsx");
 
 export const onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -17,11 +19,11 @@ export const onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-export const createPages = async ({ graphql, actions }) => {
+export const createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      postsRemark: allMarkdownRemark {
         edges {
           node {
             fields {
@@ -30,10 +32,22 @@ export const createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: { frontmatter: { tags: SELECT } }) {
+          fieldValue
+        }
+      }
     }
   `);
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
+
+  const posts = result.data.postsRemark.edges;
+
+  posts.forEach(({ node }) => {
     createPage({
       path: "/blog" + node.fields.slug,
       component: path.resolve(`./src/templates/blog-post.tsx`),
@@ -41,6 +55,18 @@ export const createPages = async ({ graphql, actions }) => {
         // Data passed to context is available
         // in page queries as GraphQL variables.
         slug: node.fields.slug,
+      },
+    });
+  });
+
+  const tags = result.data.tagsGroup.group;
+
+  tags.forEach((tag) => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
       },
     });
   });
