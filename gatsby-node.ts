@@ -52,8 +52,6 @@ export const createPages = async ({ graphql, actions, reporter }) => {
       path: "/blog" + node.fields.slug,
       component: path.resolve(`./src/templates/blog-post.tsx`),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
         slug: node.fields.slug,
       },
     });
