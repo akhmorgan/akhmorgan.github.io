@@ -50,10 +50,8 @@ export const createPages = async ({ graphql, actions, reporter }) => {
   posts.forEach(({ node }) => {
     createPage({
       path: "/blog" + node.fields.slug,
-      component: path.resolve(`./src/templates/blog-post.tsx`),
+      component: blogPostTemplate,
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
         slug: node.fields.slug,
       },
     });
@@ -72,7 +70,7 @@ export const createPages = async ({ graphql, actions, reporter }) => {
   });
 };
 
-exports.onCreatePage = ({ page, actions }) => {
+export const onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions;
 
   deletePage(page);
@@ -81,6 +79,19 @@ exports.onCreatePage = ({ page, actions }) => {
     context: {
       ...page.context,
       currentDate: new Date().toISOString(),
+    },
+  });
+};
+
+export const onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        "@components": path.resolve(__dirname, "src/components"),
+        "@images": path.resolve(__dirname, "src/images"),
+        "@styles": path.resolve(__dirname, "src/styles"),
+        "@templates": path.resolve(__dirname, "src/templates"),
+      },
     },
   });
 };

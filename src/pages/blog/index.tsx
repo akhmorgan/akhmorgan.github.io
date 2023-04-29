@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { BlogCard } from "../../components/blog-card";
+import { BlogCard } from "@components/blog-card";
 
 export default function Blog({ data }) {
   const { posts } = data.blog;
