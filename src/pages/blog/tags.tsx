@@ -16,8 +16,8 @@ const TagsPage = ({
     <div>
       <h1>Tags</h1>
       <ul>
-        {group.map((tag) => (
-          <li key={tag.fieldValue} className="row">
+        {group.map((tag, index) => (
+          <li key={index} className="row">
             <Link
               className="col-3"
               to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}

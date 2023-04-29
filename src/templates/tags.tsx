@@ -16,10 +16,10 @@ const Tags = ({ pageContext, data }) => {
     <div>
       <h1>{tagHeader}</h1>
       <ul>
-        {edges.map(({ node }) => {
+        {edges.map(({ node }, index) => {
           const { slug } = node.fields;
           const { title } = node.frontmatter;
-          return <BlogCard key={node.id} post={node}></BlogCard>;
+          return <BlogCard key={index} post={node}></BlogCard>;
         })}
       </ul>
       {/*

@@ -91,6 +91,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
         "@images": path.resolve(__dirname, "src/images"),
         "@styles": path.resolve(__dirname, "src/styles"),
         "@templates": path.resolve(__dirname, "src/templates"),
+        "@node_modules": path.resolve(__dirname, "node_modules"),
       },
     },
   });
