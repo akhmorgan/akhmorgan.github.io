@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // Components
 import { Link, graphql } from "gatsby";
-import { BlogCard } from "../components/blog-card";
+import { BlogCard } from "@components/blog-card";
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
